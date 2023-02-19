@@ -10,15 +10,13 @@ def game():
     chosen_word = random.choice(word_list)
     hidden_word = ["-" for i in range(len(chosen_word))]
     
-    past_guess = list()
-
-    attempt = 0
     global win
     global loss
+    past_guess = list()
+    attempt = 0
 
     while attempt < 8:
         print("".join(hidden_word))
-
         guess = input("Input a letter: ")
 
         if len(guess) != 1:
